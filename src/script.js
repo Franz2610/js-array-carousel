@@ -21,3 +21,16 @@ Consigli del giorno:
 2. Scriviamo sempre prima per punti il nostro algoritmo in italiano per capire cosa vogliamo fare
 3. Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda: "Quanti cicli servono?"
 */
+
+/*          <div class="slide active">
+<img src="./consegna/img/01.webp" alt="0">
+</div>*/
+
+
+const images = [
+    'img/01.webp',
+    'img/02.webp',
+    'img/03.webp',
+    'img/04.webp',
+    'img/05.webp'
+];
