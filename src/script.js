@@ -48,6 +48,8 @@ Consigli del giorno:
             <div class="box-img">
                 <img src="./img/05.webp" alt="hero-5">
             </div>
+             <button class="next"><i class="fa-solid fa-chevron-circle-right"></i></button>
+            <button class="prev"><i class="fa-solid fa-chevron-circle-left"></i></button>
 */
 
 
@@ -73,7 +75,40 @@ for (let i = 0; i < images.length; i++) {
 };
 
 
+
 //console.log(slides);
 
 slider.innerHTML += slides;
 document.querySelectorAll('.slide')[currentIndex].classList.add('active');
+
+
+
+
+
+
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+
+next.addEventListener('click', goNext);
+
+function goNext() {
+    document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
+    if(currentIndex === images.length - 1) {
+        currentIndex === 0;
+    } else {
+        currentIndex++;
+    }
+    document.querySelectorAll('.slide')[currentIndex].classList.add('active');
+}
+
+prev.addEventListener('click', goPrev);
+
+function goPrev() {
+    document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
+    if(currentIndex === 0) {
+        currentIndex === images.length - 1;
+    } else {
+        currentIndex--;
+    }
+    document.querySelectorAll('.slide')[currentIndex].classList.add('active');
+}

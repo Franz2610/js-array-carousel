@@ -13,12 +13,12 @@
 }
 
 .slider{
-    width: 70%;
+    width: 100%;
     height: 100%;
     background-color: black;
 
 }
-.thumbs{
+.thumbr{
     width: 30%;
     height: 100%;
     background-color: rgb(108, 14, 14);
@@ -34,7 +34,26 @@
     width: 100%;
     object-fit: cover;
 }
+.thumb img{
+    width: 10%;
+    object-fit: cover;
+    display: block;
+}
 
 .active{
     display: block;
+}
+.box-img{
+    width: 20%;
+}
+button{
+    color: white;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    z-index: 2000;
+}
+.next{
+    right: 0;
 }
