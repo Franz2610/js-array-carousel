@@ -54,4 +54,6 @@ for (let i = 0; i < images.lenght; i++) {
 slider.innerHTML += slides;
 document.querySelectorAll('.slide')[currentIndex].classList.add('active');
 
+/* nuova
+
 
