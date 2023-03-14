@@ -23,7 +23,7 @@ Consigli del giorno:
 */
 
 /*          <div class="slide active">
-<img src="./consegna/img/01.webp" alt="0">
+<img src="./consegna/img/01.webp" alt="roma">
 </div>*/
 
 
@@ -34,3 +34,25 @@ const images = [
     'img/04.webp',
     'img/05.webp'
 ];
+
+const slider = document.querySelector('.slider');
+//console.log(slider);
+
+let currentIndex = 0;
+let slides = '';
+
+for (let i = 0; i < images.lenght; i++) {
+    slides +=  `<div class="slide">
+                    <img src="${images[i]}" alt="hero-${i}">
+                </div>
+                 `;
+};
+
+
+//console.log(slides);
+
+slider.innerHTML += slides;
+
+document.querySelectorAll('.slide')[currentIndex].classList.add('active');
+
+
