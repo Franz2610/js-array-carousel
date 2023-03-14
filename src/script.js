@@ -52,7 +52,6 @@ for (let i = 0; i < images.lenght; i++) {
 //console.log(slides);
 
 slider.innerHTML += slides;
-
 document.querySelectorAll('.slide')[currentIndex].classList.add('active');
 
 
