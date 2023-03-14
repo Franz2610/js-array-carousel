@@ -26,6 +26,30 @@ Consigli del giorno:
 <img src="./consegna/img/01.webp" alt="roma">
 </div>*/
 
+/* 
+            <img src="./img/01.webp" alt="hero-1">
+            <img src="./img/01.webp" alt="hero-1">
+            <img src="./img/01.webp" alt="hero-1">
+            <img src="./img/01.webp" alt="hero-1">
+            <img src="./img/01.webp" alt="hero-1">
+
+            <div class="box-img">
+                <img src="./img/01.webp" alt="hero-1">
+            </div>
+            <div class="box-img">
+                <img src="./img/02.webp" alt="hero-2">
+            </div>
+            <div class="box-img">
+                <img src="./img/03.webp" alt="hero-3">
+            </div>
+            <div class="box-img">
+                <img src="./img/04.webp" alt="hero-4">
+            </div>
+            <div class="box-img">
+                <img src="./img/05.webp" alt="hero-5">
+            </div>
+*/
+
 
 const images = [
     'img/01.webp',
@@ -41,7 +65,7 @@ const slider = document.querySelector('.slider');
 let currentIndex = 0;
 let slides = '';
 
-for (let i = 0; i < images.lenght; i++) {
+for (let i = 0; i < images.length; i++) {
     slides +=  `<div class="slide">
                     <img src="${images[i]}" alt="hero-${i}">
                 </div>
@@ -53,7 +77,3 @@ for (let i = 0; i < images.lenght; i++) {
 
 slider.innerHTML += slides;
 document.querySelectorAll('.slide')[currentIndex].classList.add('active');
-
-/* nuova
-
-
