@@ -51,7 +51,8 @@
     display: block;
 }
 .box-img{
-    height: 20%;
+    height: calc(100% / 5);
+    opacity: 0.4;
 }
 button{
     color: white;
@@ -68,5 +69,5 @@ button{
     border: 2px solid white;
 }
 .opacity{
-    opacity: 0.5;
+    opacity: 1;
 }
