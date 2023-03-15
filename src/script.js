@@ -62,13 +62,21 @@ const images = [
 ];
 
 const slider = document.querySelector('.slider');
+const thumbr = document.querySelector('.thumbr');
 //console.log(slider);
 
 let currentIndex = 0;
 let slides = '';
+let thumbs ='';
 
 for (let i = 0; i < images.length; i++) {
     slides +=  `<div class="slide">
+                    <img src="${images[i]}" alt="hero-${i}">
+                </div>
+                 `;
+};
+for (let i = 0; i < images.length; i++) {
+    thumbs +=  `<div class="thumb box-img">
                     <img src="${images[i]}" alt="hero-${i}">
                 </div>
                  `;
@@ -80,6 +88,9 @@ for (let i = 0; i < images.length; i++) {
 
 slider.innerHTML += slides;
 document.querySelectorAll('.slide')[currentIndex].classList.add('active');
+
+thumbr.innerHTML += thumbs;
+document.querySelectorAll('.thumb')[currentIndex].classList.add('active');
 
 
 
@@ -93,22 +104,32 @@ next.addEventListener('click', goNext);
 
 function goNext() {
     document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
+    document.querySelectorAll('.thumb')[currentIndex].classList.remove('border-white');
+    document.querySelectorAll('.thumb')[currentIndex].classList.remove('opacity');
+
     if(currentIndex === images.length - 1) {
-        currentIndex === 0;
+        currentIndex = 0;
     } else {
         currentIndex++;
     }
     document.querySelectorAll('.slide')[currentIndex].classList.add('active');
+    document.querySelectorAll('.thumb')[currentIndex].classList.add('border-white');
+    document.querySelectorAll('.thumb')[currentIndex].classList.add('opacity');
 }
 
 prev.addEventListener('click', goPrev);
 
 function goPrev() {
     document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
+    document.querySelectorAll('.thumb')[currentIndex].classList.remove('border-white');
+    document.querySelectorAll('.thumb')[currentIndex].classList.remove('opacity');
     if(currentIndex === 0) {
-        currentIndex === images.length - 1;
+        currentIndex = images.length - 1;
     } else {
         currentIndex--;
     }
     document.querySelectorAll('.slide')[currentIndex].classList.add('active');
+    document.querySelectorAll('.thumb')[currentIndex].classList.add('border-white');
+    document.querySelectorAll('.thumb')[currentIndex].classList.add('opacity');
+
 }

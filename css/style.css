@@ -13,14 +13,15 @@
 }
 
 .slider{
-    width: 100%;
-    height: 100%;
+    width: 800px;
+    height: 800px;
     background-color: black;
+    position: relative;
 
 }
 .thumbr{
-    width: 30%;
-    height: 100%;
+    width: 300px;
+    height: 800px;
     background-color: rgb(108, 14, 14);
 }
 
@@ -29,13 +30,19 @@
     height: 100%;
     display: none;
 }
+.thumb{
+    width: 100%;
+    height: 100%;
+}
 
 .slide img{
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit:cover;
 }
 .thumb img{
-    width: 10%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -44,7 +51,7 @@
     display: block;
 }
 .box-img{
-    width: 20%;
+    height: 20%;
 }
 button{
     color: white;
@@ -56,4 +63,10 @@ button{
 }
 .next{
     right: 0;
+}
+.border-white{
+    border: 2px solid white;
+}
+.opacity{
+    opacity: 0.5;
 }
